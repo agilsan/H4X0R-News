@@ -13,6 +13,10 @@
 		A985C93F24199083004DE290 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A985C93E24199083004DE290 /* Assets.xcassets */; };
 		A985C94224199083004DE290 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A985C94124199083004DE290 /* Preview Assets.xcassets */; };
 		A985C94524199083004DE290 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A985C94324199083004DE290 /* LaunchScreen.storyboard */; };
+		A985C94E241993CB004DE290 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A985C94D241993CB004DE290 /* NetworkManager.swift */; };
+		A985C9502419955B004DE290 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A985C94F2419955B004DE290 /* PostData.swift */; };
+		A985C95324199C4D004DE290 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A985C95224199C4D004DE290 /* DetailView.swift */; };
+		A985C95524199FD9004DE290 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A985C95424199FD9004DE290 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,11 @@
 		A985C94124199083004DE290 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A985C94424199083004DE290 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A985C94624199083004DE290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A985C94D241993CB004DE290 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A985C94F2419955B004DE290 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		A985C95224199C4D004DE290 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		A985C95424199FD9004DE290 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		A9EF2C83241AE240009E7594 /* H4X0R News.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "H4X0R News.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +65,11 @@
 		A985C93724199082004DE290 /* H4X0R News */ = {
 			isa = PBXGroup;
 			children = (
+				A9EF2C83241AE240009E7594 /* H4X0R News.entitlements */,
 				A985C93824199082004DE290 /* AppDelegate.swift */,
 				A985C93A24199082004DE290 /* SceneDelegate.swift */,
-				A985C93C24199082004DE290 /* ContentView.swift */,
+				A985C95124199C16004DE290 /* Views */,
+				A985C94C241993A5004DE290 /* Model */,
 				A985C93E24199083004DE290 /* Assets.xcassets */,
 				A985C94324199083004DE290 /* LaunchScreen.storyboard */,
 				A985C94624199083004DE290 /* Info.plist */,
@@ -73,6 +84,25 @@
 				A985C94124199083004DE290 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A985C94C241993A5004DE290 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A985C94D241993CB004DE290 /* NetworkManager.swift */,
+				A985C94F2419955B004DE290 /* PostData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A985C95124199C16004DE290 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A985C93C24199082004DE290 /* ContentView.swift */,
+				A985C95224199C4D004DE290 /* DetailView.swift */,
+				A985C95424199FD9004DE290 /* WebView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A985C9502419955B004DE290 /* PostData.swift in Sources */,
+				A985C95324199C4D004DE290 /* DetailView.swift in Sources */,
+				A985C94E241993CB004DE290 /* NetworkManager.swift in Sources */,
 				A985C93924199082004DE290 /* AppDelegate.swift in Sources */,
 				A985C93B24199082004DE290 /* SceneDelegate.swift in Sources */,
 				A985C93D24199082004DE290 /* ContentView.swift in Sources */,
+				A985C95524199FD9004DE290 /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +318,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "H4X0R News/H4X0R News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"H4X0R News/Preview Content\"";
 				DEVELOPMENT_TEAM = N7U6A8T46F;
 				ENABLE_PREVIEWS = YES;
@@ -295,6 +331,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.antoniogil.H4X0R-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,7 +341,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "H4X0R News/H4X0R News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"H4X0R News/Preview Content\"";
 				DEVELOPMENT_TEAM = N7U6A8T46F;
 				ENABLE_PREVIEWS = YES;
@@ -315,6 +354,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.antoniogil.H4X0R-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
